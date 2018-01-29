@@ -4,6 +4,7 @@
 
 
 header {
+  transition: 3s;
   width: 100%;
   height: 150px;
   overflow: hidden;
@@ -20,6 +21,7 @@ header {
     margin-left: 100px;
   }
   img {
+    display: inline-block;
     width: 100px;
     height: 100px;
     padding: 25px;
@@ -56,15 +58,18 @@ header {
   }
 }
 .lead-banner {
-  position: relative;
   overflow: hidden;
+  position: relative;
   background: url(../img/wood.jpg) no-repeat center center;
   background-color: #fff;
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   height: 900px;
   img {
+    max-width: 100%;
     position: absolute;
+    height: auto;
     bottom: 0;
   }
   h1 {
@@ -99,9 +104,6 @@ header {
       width: 60px;
     }
   }
-  img {
-  // width: 200px;
-  }
   i {
     padding: 130px 0;
     font-size: 1.2rem;
@@ -109,5 +111,116 @@ header {
   }
   h4 {
     text-transform: uppercase;
+  }
+}
+
+#menu {
+  background: url(../img/character_pattern_2X.jpg);
+  overflow: hidden;
+  background-attachment: fixed;
+  @include clearFix;
+  .menu-inner {
+    .clear {
+      clear: left;
+    }
+      div {
+        overflow: hidden;
+        float: left;
+        width: 50%;
+        margin: 10px 0;
+      }
+    }
+  span {
+    color: $redMan;
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: rgb(67,61,60);
+    margin: 15px 0;
+  }
+  ul {
+    margin: 20px 0;
+  }
+  li:nth-child(1) {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  li#veggie {
+    margin: 0;
+    text-transform: lowercase;
+  }
+  li {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+}
+
+#schedule {
+  text-align: center;
+  @include clearFix;
+  p {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: rgb(246,173,73);
+  }
+  div {
+    margin-top: 100px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  img {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+
+footer {
+  text-align: center;
+  background: rgb(67,61,60);
+  color: #fff;
+  padding: 50px;
+  ul {
+    margin: 50px;
+  }
+  li {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+  i {
+    display: inline-block;
+    color: rgb(246,173,73);
+    &:hover {
+      transform: scale(1.2, 1.2);
+      transition: .3s;
+    }
+  }
+  div {
+    margin: 30px;
+  }
+  p {
+    line-height: 1.3rem;
+    font-size: 1.2rem;
+  }
+  a#top {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 4px;
+    background: rgb(246,173,73);
+    transition: .5s;
+    color: #fff;
+    &:hover {
+      background: rgb(230,0,51);
+      color: #fff;
+      transition: .5s;
+    }
   }
 }

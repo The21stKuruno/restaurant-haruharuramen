@@ -34,11 +34,16 @@ section h3 {
   font-size: 2.3rem;
   text-transform: uppercase;
   color: #e60033;
-  margin-top: 60px;
-  margin-bottom: 60px;
+}
+
+section {
+  padding: 50px 0;
 }
 
 header {
+  -webkit-transition: 3s;
+  -o-transition: 3s;
+  transition: 3s;
   width: 100%;
   height: 150px;
   overflow: hidden;
@@ -64,6 +69,7 @@ header nav {
 }
 
 header img {
+  display: inline-block;
   width: 100px;
   height: 100px;
   padding: 25px;
@@ -114,17 +120,20 @@ header #btn-order:hover {
 }
 
 .lead-banner {
-  position: relative;
   overflow: hidden;
+  position: relative;
   background: url(../img/wood.jpg) no-repeat center center;
   background-color: #fff;
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   height: 900px;
 }
 
 .lead-banner img {
+  max-width: 100%;
   position: absolute;
+  height: auto;
   bottom: 0;
 }
 
@@ -173,4 +182,151 @@ header #btn-order:hover {
 
 #how-to-order h4 {
   text-transform: uppercase;
+}
+
+#menu {
+  background: url(../img/character_pattern_2X.jpg);
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+#menu:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#menu .menu-inner .clear {
+  clear: left;
+}
+
+#menu .menu-inner div {
+  overflow: hidden;
+  float: left;
+  width: 50%;
+  margin: 10px 0;
+}
+
+#menu span {
+  color: #e60033;
+  font-size: 1.8rem;
+}
+
+#menu h4 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #433d3c;
+  margin: 15px 0;
+}
+
+#menu ul {
+  margin: 20px 0;
+}
+
+#menu li:nth-child(1) {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+#menu li#veggie {
+  margin: 0;
+  text-transform: lowercase;
+}
+
+#menu li {
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+#schedule {
+  text-align: center;
+}
+
+#schedule:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#schedule p {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #f6ad49;
+}
+
+#schedule div {
+  margin-top: 100px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#schedule img {
+  float: left;
+  width: 33.33333333333333%;
+}
+
+footer {
+  text-align: center;
+  background: #433d3c;
+  color: #fff;
+  padding: 50px;
+}
+
+footer ul {
+  margin: 50px;
+}
+
+footer li {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0 20px;
+}
+
+footer i {
+  display: inline-block;
+  color: #f6ad49;
+}
+
+footer i:hover {
+  -webkit-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+footer div {
+  margin: 30px;
+}
+
+footer p {
+  line-height: 1.3rem;
+  font-size: 1.2rem;
+}
+
+footer a#top {
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 4px;
+  background: #f6ad49;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  color: #fff;
+}
+
+footer a#top:hover {
+  background: #e60033;
+  color: #fff;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }

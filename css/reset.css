@@ -1,6 +1,6 @@
 body {
   font-family: 'Ubuntu', arial, sans-serif;
-  background: rgb(252,244,231);
+  background: #fcf4e7;
 }
 
 html, body, ul, ol, li, form, fieldset, legend {
@@ -25,6 +25,7 @@ li {
   max-width: 1060px;
   margin: 0 auto;
   padding: 0 20px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -32,9 +33,6 @@ section h3 {
   text-align: center;
   font-size: 2.3rem;
   text-transform: uppercase;
-  color: rgb(230,0,51);
-}
-
-section {
-  padding: 50px 0;
+  color: #e60033;
+  margin: 200px;
 }
