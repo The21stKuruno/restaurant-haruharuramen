@@ -207,12 +207,24 @@ header #btn-order:hover {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 700px) {
+  .lead-banner h1 {
+    font-size: 4rem;
+  }
+}
+
 .lead-banner h3 {
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .lead-banner h3 {
+    font-size: 1rem;
+  }
 }
 
 .how-to-order-inner {
@@ -242,10 +254,32 @@ header #btn-order:hover {
   max-width: 100%;
 }
 
+@media screen and (max-width: 800px) {
+  .how-to-order-inner .fa-chevron-right {
+    display: none;
+  }
+}
+
+.how-to-order-inner .fa-chevron-down {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .how-to-order-inner .fa-chevron-down {
+    display: block;
+  }
+}
+
 .how-to-order-inner i {
   padding: 50%;
   font-size: 1.2rem;
   color: #e60033;
+}
+
+@media screen and (max-width: 800px) {
+  .how-to-order-inner i {
+    padding: 0;
+  }
 }
 
 .how-to-order-inner h4 {
@@ -273,6 +307,14 @@ header #btn-order:hover {
   float: left;
   width: 50%;
   margin: 10px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  #menu .menu-inner div {
+    float: none;
+    width: 100%;
+  }
 }
 
 #menu span {

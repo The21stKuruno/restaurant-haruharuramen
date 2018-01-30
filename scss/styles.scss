@@ -122,6 +122,9 @@ header {
     margin-top: 280px;
     text-align: center;
     margin-bottom: 0;
+    @include mQ(700px) {
+      font-size: 4rem;
+    };
   }
   h3 {
     font-size: 1.2rem;
@@ -129,6 +132,9 @@ header {
     text-transform: uppercase;
     color: #fff;
     text-align: center;
+    @include mQ(700px) {
+      font-size: 1rem;
+    };
   }
 }
 
@@ -147,10 +153,24 @@ header {
   img {
     max-width: 100%;
   }
+  .fa-chevron-right {
+    @include mQ(800px) {
+      display: none;
+    };
+  }
+  .fa-chevron-down {
+    display: none;
+    @include mQ(800px) {
+      display: block;
+    };
+  }
   i {
     padding: 50%;
     font-size: 1.2rem;
     color: $redMan;
+    @include mQ(800px) {
+      padding: 0;
+    };
   }
   h4 {
     text-transform: uppercase;
@@ -171,6 +191,11 @@ header {
         float: left;
         width: 50%;
         margin: 10px 0;
+        text-align: center;
+        @include mQ(700px) {
+          float: none;
+          width: 100%;
+        };
       }
     }
   span {
