@@ -11,20 +11,59 @@ header {
   position: absolute;
   z-index: 1;
   top: 0;
-  @include clearFix;
-  img, nav, #btn-order {
+  .header-inner {
+    position: relative;
+    @include clearFix;
+  }
+  #burger-icon {
+    display: none;
+    box-sizing: border-box;
+    width: 50px;
+    height: 40px;
+    background: $yellowMan;
+    position: absolute;
+    right: 20px;
+    top: 55px;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    @include mQ(800px) {
+        display: inline-block;
+    }
+    &:hover {
+      transition: .5s;
+      background: $redMan;
+    }
+  }
+  span {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    display: block;
+    margin-bottom: 5px;
+    border-radius: 4px;
+  }
+  #my-logo, nav, .btn-order-online {
     float: left;
     display: block;
     text-transform: uppercase;
+    box-sizing: border-box;
+  }
+  #my-logo {
+    width: 15%;
   }
   nav {
-    margin-left: 100px;
+    text-align: center;
+    width: 60%;
+    @include mQ(800px) {
+      display: none;
+    };
   }
   img {
     display: inline-block;
     width: 100px;
     height: 100px;
-    padding: 25px;
+    margin: 25px 0;
   }
   li {
     display: inline-block;
@@ -41,8 +80,12 @@ header {
       transition: .5s;
     }
   }
-  div {
+  .btn-order-online {
+    width: 25%;
     padding: 50.4px 0 50.4px 20px;
+    @include mQ(800px) {
+      display: none;
+    };
   }
   #btn-order {
     float: right;
@@ -89,23 +132,23 @@ header {
   }
 }
 
-#how-to-order {
-  @include clearFix;
-  .how-to-order-inner {
-    div {
-      float: left;
-    }
-    div.img-here {
-      text-align: center;
-      width: 300px;
-      height: auto;
-    }
-    div.arrow {
-      width: 60px;
-    }
+.how-to-order-inner {
+  width: 100%;
+    @include clearFix;
+  div {
+    float: left;
+    width: (100% / 5);
+    text-align: center;
+    @include mQ(800px) {
+      float: none;
+      width: 100%;
+    };
+  }
+  img {
+    max-width: 100%;
   }
   i {
-    padding: 130px 0;
+    padding: 50%;
     font-size: 1.2rem;
     color: $redMan;
   }
