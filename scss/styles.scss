@@ -7,7 +7,6 @@ header {
   transition: 3s;
   width: 100%;
   height: 150px;
-  overflow: hidden;
   position: absolute;
   z-index: 1;
   top: 0;
@@ -22,11 +21,12 @@ header {
     height: 40px;
     background: $yellowMan;
     position: absolute;
-    right: 20px;
+    left: -70px;
     top: 55px;
     border-radius: 4px;
     padding: 10px;
     cursor: pointer;
+    transition: .5s;
     @include mQ(800px) {
         display: inline-block;
     }
@@ -52,11 +52,40 @@ header {
   #my-logo {
     width: 15%;
   }
+  nav.visible {
+    right: 0;
+    transition: .5s;
+  }
   nav {
     text-align: center;
     width: 60%;
     @include mQ(800px) {
-      display: none;
+      transition: .3s;
+      position: fixed;
+      background-color: $navBgColor;
+      right: -40%;
+      top: 0;
+      width: 40%;
+      height: 100vh;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      ul {
+        padding-top: 55px;
+        width: 100%;
+      }
+      li {
+        padding: 0;
+        margin: 0;
+        display: block;
+      }
+      a {
+        padding: 10px;
+        display: block;
+        &:hover {
+          color: $whiteMan;background: $redMan;
+        }
+      }
     };
   }
   img {
@@ -71,7 +100,7 @@ header {
   }
   a {
     text-decoration: none;
-    color: #fff;
+    color: $whiteMan;
     font-size: 1.1rem;
     font-weight: 700;
     transition: .5s;
@@ -95,7 +124,7 @@ header {
     transition: .5s;
     &:hover {
       background: rgb(230,0,51);
-      color: #fff;
+      color: $whiteMan;
       transition: .5s;
     }
   }
@@ -103,10 +132,9 @@ header {
 .lead-banner {
   overflow: hidden;
   position: relative;
-  background: url(../img/wood.jpg) no-repeat center center;
+  background: url(../img/wood.jpg) no-repeat top center;
   background-color: #fff;
   background-size: cover;
-  background-attachment: fixed;
   width: 100%;
   height: 900px;
   img {
@@ -117,7 +145,7 @@ header {
   }
   h1 {
     font-size: 5.4rem;
-    color: #fff;
+    color: $whiteMan;
     text-transform: uppercase;
     margin-top: 280px;
     text-align: center;
