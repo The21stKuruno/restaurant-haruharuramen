@@ -2,7 +2,6 @@
 @import "mixins";
 @import "variables";
 
-
 header {
   transition: 3s;
   width: 100%;
@@ -21,17 +20,18 @@ header {
     height: 40px;
     background: $yellowMan;
     position: absolute;
-    left: -70px;
+    z-index: 1000;
     top: 55px;
+    left: -70px;
     border-radius: 4px;
     padding: 10px;
     cursor: pointer;
-    transition: .5s;
+    transition: 0.5s;
     @include mQ(800px) {
-        display: inline-block;
+      display: inline-block;
     }
     &:hover {
-      transition: .5s;
+      transition: 0.5s;
       background: $redMan;
     }
   }
@@ -43,7 +43,9 @@ header {
     margin-bottom: 5px;
     border-radius: 4px;
   }
-  #my-logo, nav, .btn-order-online {
+  #my-logo,
+  nav,
+  .btn-order-online {
     float: left;
     display: block;
     text-transform: uppercase;
@@ -54,14 +56,14 @@ header {
   }
   nav.visible {
     right: 0;
-    transition: .5s;
+    transition: 0.5s;
   }
   nav {
     text-align: center;
     width: 60%;
     @include mQ(800px) {
-      transition: .3s;
-      position: fixed;
+      transition: 0.3s;
+      position: absolute;
       background-color: $navBgColor;
       right: -40%;
       top: 0;
@@ -83,10 +85,11 @@ header {
         padding: 10px;
         display: block;
         &:hover {
-          color: $whiteMan;background: $redMan;
+          color: $whiteMan;
+          background: $redMan;
         }
       }
-    };
+    }
   }
   img {
     display: inline-block;
@@ -103,10 +106,10 @@ header {
     color: $whiteMan;
     font-size: 1.1rem;
     font-weight: 700;
-    transition: .5s;
+    transition: 0.5s;
     &:hover {
-      color: rgb(230,0,51);
-      transition: .5s;
+      color: rgb(230, 0, 51);
+      transition: 0.5s;
     }
   }
   .btn-order-online {
@@ -114,18 +117,18 @@ header {
     padding: 50.4px 0 50.4px 20px;
     @include mQ(800px) {
       display: none;
-    };
+    }
   }
   #btn-order {
     float: right;
     padding: 15px;
     border-radius: 4px;
-    background: rgb(246,173,73);
-    transition: .5s;
+    background: rgb(246, 173, 73);
+    transition: 0.5s;
     &:hover {
-      background: rgb(230,0,51);
+      background: rgb(230, 0, 51);
       color: $whiteMan;
-      transition: .5s;
+      transition: 0.5s;
     }
   }
 }
@@ -152,7 +155,7 @@ header {
     margin-bottom: 0;
     @include mQ(700px) {
       font-size: 4rem;
-    };
+    }
   }
   h3 {
     font-size: 1.2rem;
@@ -162,13 +165,13 @@ header {
     text-align: center;
     @include mQ(700px) {
       font-size: 1rem;
-    };
+    }
   }
 }
 
 .how-to-order-inner {
   width: 100%;
-    @include clearFix;
+  @include clearFix;
   div {
     float: left;
     width: (100% / 5);
@@ -176,7 +179,7 @@ header {
     @include mQ(800px) {
       float: none;
       width: 100%;
-    };
+    }
   }
   img {
     max-width: 100%;
@@ -184,13 +187,13 @@ header {
   .fa-chevron-right {
     @include mQ(800px) {
       display: none;
-    };
+    }
   }
   .fa-chevron-down {
     display: none;
     @include mQ(800px) {
       display: block;
-    };
+    }
   }
   i {
     padding: 50%;
@@ -198,7 +201,7 @@ header {
     color: $redMan;
     @include mQ(800px) {
       padding: 0;
-    };
+    }
   }
   h4 {
     text-transform: uppercase;
@@ -214,18 +217,18 @@ header {
     .clear {
       clear: left;
     }
-      div {
-        overflow: hidden;
-        float: left;
-        width: 50%;
-        margin: 10px 0;
-        text-align: center;
-        @include mQ(700px) {
-          float: none;
-          width: 100%;
-        };
+    div {
+      overflow: hidden;
+      float: left;
+      width: 50%;
+      margin: 10px 0;
+      text-align: center;
+      @include mQ(700px) {
+        float: none;
+        width: 100%;
       }
     }
+  }
   span {
     color: $redMan;
     font-size: 1.8rem;
@@ -233,7 +236,7 @@ header {
   h4 {
     font-size: 2.2rem;
     font-weight: 400;
-    color: rgb(67,61,60);
+    color: rgb(67, 61, 60);
     margin: 15px 0;
   }
   ul {
@@ -261,7 +264,7 @@ header {
   p {
     font-size: 1.3rem;
     text-transform: uppercase;
-    color: rgb(246,173,73);
+    color: rgb(246, 173, 73);
   }
   div {
     margin-top: 100px;
@@ -276,7 +279,7 @@ header {
 
 footer {
   text-align: center;
-  background: rgb(67,61,60);
+  background: rgb(67, 61, 60);
   color: #fff;
   padding: 50px;
   ul {
@@ -289,10 +292,10 @@ footer {
   }
   i {
     display: inline-block;
-    color: rgb(246,173,73);
+    color: rgb(246, 173, 73);
     &:hover {
       transform: scale(1.2, 1.2);
-      transition: .3s;
+      transition: 0.3s;
     }
   }
   div {
@@ -310,13 +313,13 @@ footer {
     text-decoration: none;
     padding: 15px;
     border-radius: 4px;
-    background: rgb(246,173,73);
-    transition: .5s;
+    background: rgb(246, 173, 73);
+    transition: 0.5s;
     color: #fff;
     &:hover {
-      background: rgb(230,0,51);
+      background: rgb(230, 0, 51);
       color: #fff;
-      transition: .5s;
+      transition: 0.5s;
     }
   }
 }

@@ -69,14 +69,15 @@ header #burger-icon {
   height: 40px;
   background: #f6ad49;
   position: absolute;
-  left: -70px;
+  z-index: 1000;
   top: 55px;
+  left: -70px;
   border-radius: 4px;
   padding: 10px;
   cursor: pointer;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media screen and (max-width: 800px) {
@@ -86,9 +87,9 @@ header #burger-icon {
 }
 
 header #burger-icon:hover {
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   background: #e60033;
 }
 
@@ -101,7 +102,9 @@ header span {
   border-radius: 4px;
 }
 
-header #my-logo, header nav, header .btn-order-online {
+header #my-logo,
+header nav,
+header .btn-order-online {
   float: left;
   display: block;
   text-transform: uppercase;
@@ -115,9 +118,9 @@ header #my-logo {
 
 header nav.visible {
   right: 0;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header nav {
@@ -127,10 +130,10 @@ header nav {
 
 @media screen and (max-width: 800px) {
   header nav {
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-    position: fixed;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    position: absolute;
     background-color: #383838;
     right: -40%;
     top: 0;
@@ -177,16 +180,16 @@ header a {
   color: #fff;
   font-size: 1.1rem;
   font-weight: 700;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header a:hover {
   color: #e60033;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header .btn-order-online {
@@ -205,17 +208,17 @@ header #btn-order {
   padding: 15px;
   border-radius: 4px;
   background: #f6ad49;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header #btn-order:hover {
   background: #e60033;
   color: #fff;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .lead-banner {
@@ -441,9 +444,9 @@ footer i:hover {
   -webkit-transform: scale(1.2, 1.2);
   -ms-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 footer div {
@@ -464,16 +467,16 @@ footer a#top {
   padding: 15px;
   border-radius: 4px;
   background: #f6ad49;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   color: #fff;
 }
 
 footer a#top:hover {
   background: #e60033;
   color: #fff;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
